@@ -1,0 +1,21 @@
+<div *ngIf="users!=0">
+  <b>User List</b>
+  <ul>
+
+    <li *ngFor="let user of users;let i =index;">
+      {{user.name}} <button (click)="deleteUser(i,user)">X</button>
+    </li>
+  </ul>
+</div>
+<div *ngIf="deleteUsers!=0">
+  <b>Deleted List</b>
+  <ul>
+
+    <li *ngFor="let user of deleteUsers;let i =index;">
+      <del>{{user.name}}</del><button (click)="addUser(i,user)">Add</button>
+    </li>
+
+  </ul>
+
+</div>
+

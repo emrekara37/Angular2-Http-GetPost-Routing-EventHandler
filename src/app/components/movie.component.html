@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)]="movieText"   #movieName/>
+<button (click)="getMovieData(movieName)" > Search <span *ngIf="movieText!=null">For {{movieText}} </span></button>
+
+<div *ngIf="movie!=null">
+  <b>Search Result For {{movieName.value}}</b>
+  <h4>{{movie.Title}} -- {{movie.Year}}</h4>
+  <img src="{{movie.Poster}}">
+</div>
